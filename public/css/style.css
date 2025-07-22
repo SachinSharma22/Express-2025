@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    font-size: 33px;
+    color: brown;
+}
+a{
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin: 13px;
+    background: white;
+    color: rgb(58, 58, 197);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: larger;
+}
+a:hover{
+    font: bold;
+    background: rgb(50, 50, 197);
+    color: white;
+}
