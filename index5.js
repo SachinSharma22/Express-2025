@@ -5,6 +5,10 @@ const app = express();
 const cssPath = path.resolve('public');
 app.use(express.static(cssPath));
 
+app.get("/error",(req,res,next) => {
+    const err = new Error("Something went wrong!");
+    next(err)
+})
 const absPath = path.resolve("view")
 app.get("/", (req, res) => {
   res.sendFile(absPath+"/home.html");
@@ -25,6 +29,7 @@ app.post("/submit", (req, res) => {
     console.log("user login successful")
   res.send(req.body);
 });
+
 app.use((err,req,res,next) => {
     console.error(err.stack);
     res.status(500).send("Something broke!");
