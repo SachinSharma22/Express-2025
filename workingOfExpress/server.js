@@ -10,6 +10,7 @@ const app = express();
 //     next(); //if not called server got hand
 // });
 
+app.use(express.json());
 app.use(logger);
 
 app.use("/users", userRoutes);
